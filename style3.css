@@ -1,0 +1,244 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background: white;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.nav ul {
+    display: flex;
+    list-style: none;
+}
+
+
+.nav a {
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    margin: 15px;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.home .left img {
+    width: 98%;
+}
+
+.home .left .future {
+    display: flex;
+}
+
+.future .section1 {
+    margin: 15px 0;
+}
+
+.future .section2 {
+    color: hsl(233, 8%, 79%);
+    margin: 15px 0;
+    line-height: 25px;
+
+}
+
+.future .section2 button {
+    background-color: hsl(5, 85%, 63%);
+    padding: 10px 20px;
+    border: none;
+    margin: 30px 0;
+    text-transform: uppercase;
+    width: 50%;
+}
+
+.future .section2 button a {
+    color: antiquewhite;
+    font-weight: 800;
+    /* text-decoration: none; */
+}
+
+.home .right {
+    background-color: hsl(240, 100%, 5%);
+    color: hsl(233, 8%, 79%);
+    padding: 0 30px;
+}
+
+.section-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 70px 4%;
+    gap: 30px;
+    /* flex-wrap: wrap; */
+}
+
+.section-cards .section {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 350px;
+}
+
+.section .left img {
+    width: 100px;
+    height: 130px;
+    object-fit: cover;
+    /* border-radius: 8px; */
+}
+
+.section .right h1 {
+    font-size: 30px;
+    color: hsl(233, 8%, 79%);
+    margin: 0;
+    font-weight: 700;
+}
+
+.section .right h3 {
+    margin: 8px 0 5px;
+    font-size: 16px;
+    color: hsl(240, 100%, 5%);
+    font-weight: bold;
+}
+
+.section .right p {
+    font-size: 14px;
+    color: hsl(236, 13%, 42%);
+    line-height: 1.4;
+}
+
+.toggle-btn {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* 🧠 Goal:
+Make your layout adjust beautifully on:
+
+Desktop (above 992px)
+
+Tablet (between 601px and 992px)
+
+Mobile (600px and below) */
+
+@media (max-width:992px) and (min-width:601px) {
+    .home {
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+    }
+
+    .future {
+        flex-direction: column;
+    }
+
+    .future .section2 button {
+        width: 100%;
+    }
+
+
+
+    .section-cards {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .section-cards .section {
+        flex: 1 1 45%;
+        max-width: 100%;
+    }
+
+}
+
+/* ===== Mobile (600px and below) ===== */
+
+@media (max-width:600px) {
+    .toggle-btn {
+    display: block;
+  }
+   .nav {
+    display: none;
+    width: 100%;
+  }
+   .nav.open {
+    display: block;
+  }
+    .nav a {
+    display: block;
+    padding: 10px 0;
+  }  
+
+    .home {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .future {
+        flex-direction: column;
+    }
+
+    .future .section1 h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .future .section2 {
+        font-size: 14px;
+        line-height: 22px;
+        text-align: center;
+    }
+
+    .future .section2 button {
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    .home .right {
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+     .section-cards {
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 10px;
+  }
+
+     .section-cards .section {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+   .section .left img {
+    width: 300px;
+    height: 200px;
+  }
+    .section .right h1 {
+        font-size: 24px;
+    }
+
+      .section .right h3 {
+    font-size: 16px;
+  }
+   .section .right p {
+    font-size: 13px;
+  }
+
+}
